@@ -34,14 +34,14 @@ const App = () => {
 
   // Todo Delete Function
   const handleToDoDelete = index => {
-    const reducedTodos = allTodos.filter((_, idx) => idx !== index);
+    const reducedTodos = allTodos.filter(id => id !== index);
     localStorage.setItem("todoList", JSON.stringify(reducedTodos));
     setAllTodos(reducedTodos);
   };
 
   // Compete Todo Delete Function
   const CompletedTodoDelete = index => {
-    const reducedCompletedTodos = completedTodos.filter((_, idx) => idx !== index);
+    const reducedCompletedTodos = completedTodos.filter(id => id !== index);
     localStorage.setItem("completedTodos", JSON.stringify(reducedCompletedTodos));
     setCompletedTodos(reducedCompletedTodos);
   };
